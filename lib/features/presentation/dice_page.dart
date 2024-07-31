@@ -31,7 +31,7 @@ class DiceGame extends StatelessWidget {
         ),
         backgroundColor: Colors.blue,
       ),
-      backgroundColor: Colors.deepPurple,
+      backgroundColor: Colors.green,
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -43,7 +43,7 @@ class DiceGame extends StatelessWidget {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[700],
+                backgroundColor: Colors.red,
                 padding: EdgeInsets.all(16),
               ),
               onPressed: cubit.rollTheDice,
@@ -101,9 +101,9 @@ class DicesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final index1 = context.watch<DiceState>().index1;
-    final index2 = context.watch<DiceState>().index2;
-    final List images = context.watch<DiceState>().images;
+    final index1 = context.watch<DiceCubit>().state.index1;
+    final index2 = context.watch<DiceCubit>().state.index2;
+    final List images = context.watch<DiceCubit>().state.images;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,

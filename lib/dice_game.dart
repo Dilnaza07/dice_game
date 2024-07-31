@@ -11,13 +11,13 @@ class DicePage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DiceNotifier>(
       create: (context) => DiceNotifier(),
-      child: DiceGame(),
+      child: DiceGame1(),
     );
   }
 }
 
-class DiceGame extends StatelessWidget {
-  const DiceGame({super.key});
+class DiceGame1 extends StatelessWidget {
+  const DiceGame1({super.key});
 
   @override
   Widget build(BuildContext context) {
